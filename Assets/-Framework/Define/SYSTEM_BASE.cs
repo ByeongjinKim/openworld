@@ -1,0 +1,5 @@
+public class SYSTEM_BASE
+{
+	public const float UNSCALE_TIME_GRAPHIC_LIMIT_UNDER_FRAME_HARP = 1f/60;
+	public const float UNSCALE_TIME_GRAPHIC_LIMIT_UNDER_FRAME = 1f/30;
+}

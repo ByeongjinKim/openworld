@@ -12,7 +12,7 @@ public class MapLoad : MonoBehaviour
 	
 	IEnumerator Load( string url )
 	{
-		if( string.IsNullOrEmpty(url) ) yield break;
+		if( !Library.Is(url) ) yield break;
 
         UnityWebRequest request = UnityWebRequest.Get(url);
 		yield return request.SendWebRequest();
@@ -26,7 +26,6 @@ public class MapLoad : MonoBehaviour
 				foreach( string sceneName in sceneArray )
 				{
 					SceneManager.LoadScene( sceneName, LoadSceneMode.Additive );
-//					SceneManager.SetActiveScene( 
 				}
 			}
 		}
